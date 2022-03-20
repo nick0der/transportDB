@@ -1,0 +1,41 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/taxi" method="POST" autocomplete="off">
+<input type="hidden" name="_id" value="{{taxi._id}}">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label>Model</label>
+      <input type="text" class="form-control" name="model" placeholder="Model" value="{{taxi.model}}">
+      <div class="text-danger">
+        {{taxi.modelError}}
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <label>Color</label>
+      <input type="text" class="form-control" name="color" placeholder="Color" value="{{taxi.color}}">
+      <div class="text-danger">
+        {{taxi.colorError}}
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <label>Seats</label>
+      <input type="number" class="form-control" name="seats" placeholder="Seats" value="{{taxi.seats}}">
+      <div class="text-danger">
+        {{taxi.seatsError}}
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <label>Track Number</label>
+      <input type="text" class="form-control" name="trackNumber" placeholder="Track №" value="{{taxi.trackNumber}}">
+      <div class="text-danger">
+        {{taxi.trackNumberError}}
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-info"><i class="fa fa-database" style="margin-right: 5px;"></i>Submit</button>
+    <a class="btn btn-secondary" href="/taxi/list"><i class="fa fa-list-alt" style="margin-right: 5px;"></i>View All</a>
+
+  </div>
+
+</form>

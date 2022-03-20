@@ -1,0 +1,48 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/chief" method="POST" autocomplete="off">
+<input type="hidden" name="_id" value="{{chief._id}}">
+  <div class="form-group">
+    <label>Full Name</label>
+    <input type="text" class="form-control" name="fullName" placeholder="Full Name" value="{{chief.fullName}}">
+    <div class="text-danger">
+      {{chief.fullNameError}}
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label>Salary</label>
+      <input type="text" class="form-control" name="salary" placeholder="Salary" value="{{chief.salary}}">
+      <div class="text-danger">
+        {{chief.salaryError}}
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <label>Age</label>
+      <input type="number" class="form-control" name="age" placeholder="Age" value="{{chief.age}}">
+      <div class="text-danger">
+        {{chief.ageError}}
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <label>Email</label>
+      <input type="text" class="form-control" name="email" placeholder="Email" value="{{chief.email}}">
+      <div class="text-danger">
+        {{chief.emailError}}
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <label>Mobile</label>
+      <input type="text" class="form-control" name="mobile" placeholder="Mobile" value="{{chief.mobile}}">
+      <div class="text-danger">
+        {{chief.mobileError}}
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-info"><i class="fa fa-database" style="margin-right: 5px;"></i>Submit</button>
+    <a class="btn btn-secondary" href="/chief/list"><i class="fa fa-list-alt" style="margin-right: 5px;"></i>View All</a>
+
+  </div>
+
+</form>

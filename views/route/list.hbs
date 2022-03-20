@@ -1,0 +1,24 @@
+<h3><a class="btn btn-secondary" href="/route" style="margin-right: 10px; background: #283059;"><i class="fa fa-plus"> Create New</i></a>Route List</h3>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Start</th>
+      <th>Finish</th>
+      <th>Distance</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each list}}
+    <tr>
+      <td>{{this.start}}</td>
+      <td>{{this.finish}}</td>
+      <td>{{this.distance}} km</td>
+      <td>
+        <a href="/route/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+        <a href="/route/delete/{{this._id}}" onclick="return confirm('Are you sure you to delete this record?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

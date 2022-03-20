@@ -1,0 +1,41 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/routeTaxi" method="POST" autocomplete="off">
+<input type="hidden" name="_id" value="{{routeTaxi._id}}">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label>Model</label>
+      <input type="text" class="form-control" name="model" placeholder="Model" value="{{routeTaxi.model}}">
+      <div class="text-danger">
+        {{routeTaxi.modelError}}
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <label>Color</label>
+      <input type="text" class="form-control" name="color" placeholder="Color" value="{{routeTaxi.color}}">
+      <div class="text-danger">
+        {{routeTaxi.colorError}}
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <label>Seats</label>
+      <input type="number" class="form-control" name="seats" placeholder="Seats" value="{{routeTaxi.seats}}">
+      <div class="text-danger">
+        {{routeTaxi.seatsError}}
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <label>Track Number</label>
+      <input type="text" class="form-control" name="trackNumber" placeholder="Track №" value="{{routeTaxi.trackNumber}}">
+      <div class="text-danger">
+        {{routeTaxi.trackNumberError}}
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-info"><i class="fa fa-database" style="margin-right: 5px;"></i>Submit</button>
+    <a class="btn btn-secondary" href="/routeTaxi/list"><i class="fa fa-list-alt" style="margin-right: 5px;"></i>View All</a>
+
+  </div>
+
+</form>

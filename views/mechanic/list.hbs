@@ -1,0 +1,28 @@
+<h3><a class="btn btn-secondary" href="/mechanic" style="margin-right: 10px; background: #283059;"><i class="fa fa-plus"> Create New</i></a>Mechanic List</h3>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Full Name</th>
+      <th>Salary</th>
+      <th>Age</th>
+      <th>Email</th>
+      <th>Mobile</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each list}}
+    <tr>
+      <td>{{this.fullName}}</td>
+      <td>{{this.salary}}</td>
+      <td>{{this.age}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.mobile}}</td>
+      <td>
+        <a href="/mechanic/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+        <a href="/mechanic/delete/{{this._id}}" onclick="return confirm('Are you sure you to delete this record?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

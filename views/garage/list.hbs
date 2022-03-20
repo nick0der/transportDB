@@ -1,0 +1,24 @@
+<h3><a class="btn btn-secondary" href="/garage" style="margin-right: 10px; background: #283059;"><i class="fa fa-plus"> Create New</i></a>Garage List</h3>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Address</th>
+      <th>Area</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each list}}
+    <tr>
+      <td>{{this.number}}</td>
+      <td>{{this.address}}</td>
+      <td>{{this.area}} m²</td>
+      <td>
+        <a href="/garage/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+        <a href="/garage/delete/{{this._id}}" onclick="return confirm('Are you sure you to delete this record?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
